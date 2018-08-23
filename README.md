@@ -1,2 +1,2 @@
-# android-firebase
-Firebase wrapper for Android Apps
+# Android Firebase
+Firebase wrapper library for Android Apps
