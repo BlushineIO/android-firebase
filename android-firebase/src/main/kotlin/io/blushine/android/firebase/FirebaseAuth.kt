@@ -33,8 +33,6 @@ object FirebaseAuth {
 				AuthUI.IdpConfig.PhoneBuilder().build()
 		)
 
-		// Firebase App
-
 		val signInIntent = AuthUI.getInstance().createSignInIntentBuilder()
 				.setAvailableProviders(providers)
 				.build()
