@@ -3,7 +3,6 @@
 	package="io.blushine.android.firebase">
 
 	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-sdk android:minSdkVersion="21" />
 
 	<application />
 </manifest>
