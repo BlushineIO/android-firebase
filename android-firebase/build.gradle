@@ -22,7 +22,7 @@ android {
     buildToolsVersion buildToolsVersionVal
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        main.java.srcDirs += 'src/main/kotlin/'
     }
     defaultConfig {
         minSdkVersion minSdkVersionVal
