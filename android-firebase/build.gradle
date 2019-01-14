@@ -48,6 +48,7 @@ dependencies {
     implementation project(':common-utils')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersionVal"
 
+    api 'com.google.android.gms:play-services-base:16.1.0'
     api 'com.google.firebase:firebase-core:16.0.6'
     api 'com.google.firebase:firebase-auth:16.1.0'
     api 'com.google.firebase:firebase-firestore:17.1.5'
