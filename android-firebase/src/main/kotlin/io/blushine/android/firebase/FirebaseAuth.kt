@@ -4,6 +4,8 @@ import android.app.Activity.RESULT_OK
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.squareup.otto.Subscribe
 import io.blushine.android.ActivityResultEvent
 import io.blushine.android.AppActivity
@@ -18,6 +20,12 @@ object FirebaseAuth {
 
 	init {
 		EventBus.getInstance().register(this)
+
+		val firestore = FirebaseFirestore.getInstance()
+		val settings = FirebaseFirestoreSettings.Builder()
+				.setTimestampsInSnapshotsEnabled(true)
+				.build()
+		firestore.firestoreSettings = settings
 	}
 
 	/**
@@ -46,7 +54,6 @@ object FirebaseAuth {
 	fun signOut() {
 		AuthUI.getInstance().signOut(AppActivity.getActivity());
 	}
-
 
 	/**
 	 * Delete the user. Be sure to delete the user's data in databases or cloud storage before deleting the
